@@ -18,7 +18,7 @@ async def on_ready():
     isrunning = False
 
 # owner
-owner = "141695444995670017"
+owner = "509386354862456833"
 
 @bot.event
 async def on_raw_reaction_add(emoji, messageid, channelid, member):
@@ -37,7 +37,7 @@ async def star_post_check(message):
     isstar = False
     best_of = discord.utils.get(message.guild.channels, name= "best_of")
     for i in message.reactions:
-        if i.emoji == ("⭐") and i.count >= 5 and message.channel != best_of:
+        if i.emoji == ("⭐") and i.count >= 1 and message.channel != best_of:
             isstar = True
     if isstar:
         # embed message itself
