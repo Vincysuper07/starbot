@@ -6,7 +6,7 @@ class starboard(commands.Cog):
             self.bot = bot
 
 description = '''A star bot.'''
-bot = commands.Bot(command_prefix='v!starboard ', description=description)
+bot = commands.Bot(command_prefix='v!starboarb ', description=description)
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -35,7 +35,7 @@ async def star_post_check(message):
     if match:
         return
     isstar = False
-    best_of = discord.utils.get(message.guild.channels, name= "best_of")
+    best_of = discord.utils.get(message.guild.channels, name= "stelle")
     for i in message.reactions:
         if i.emoji == ("⭐") and i.count >= 1 and message.channel != best_of:
             isstar = True
