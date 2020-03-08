@@ -79,4 +79,4 @@ async def recheck(ctx):
           + str(guildcount) + " guilds.")
 
 def setup(bot):
-      bot.add_cog(ServStatus(bot))
+      bot.add_cog(starboard(bot))
