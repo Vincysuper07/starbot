@@ -41,20 +41,20 @@ async def star_post_check(message):
             isstar = True
     if isstar:
         # embed message itself
-        em = discord.Embed(title='Starred post', description=message.content, colour=0xFFD700)
-        em.set_author(name=message.author, icon_url=message.author.avatar_url)
+        embed = discord.Embed(title='Starred post', description=message.content, colour=0xFFD700)
+        embed.set_author(name=message.author, icon_url=message.author.avatar_url)
         try:
             if message.content.startswith('https://'):
-                em.set_image(url=message.content)
+                embed.set_image(url=message.content)
         except:
             pass
         try:
             attach = message.attachments
-            em.set_image(url = attach[0].url)
+            embed.set_image(url = attach[0].url)
         except:
             pass
         # sending actual embed
-        await best_of.send(embed=em)
+        await stelle.send(embed=embed)
         print ("* Starred "+str(message.id)+" by "+message.author.display_name)
         cache = open("sent.txt", "a")
         cache.write(str(message.id) + " ")
