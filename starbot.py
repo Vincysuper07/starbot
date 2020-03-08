@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 description = '''A star bot.'''
-bot = commands.Bot(command_prefix='!', description=description)
+bot = commands.Bot(command_prefix='v!starboard ', description=description)
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -77,6 +77,3 @@ async def recheck(ctx):
         guildcount += 1
     print("Finished checking " + str(messagecount) + " messages in " + str(channelcount) + " channels and "
           + str(guildcount) + " guilds.")
-token = open("token.txt", 'r')
-bot.run(token.read().strip(), bot=True, reconnect=True)
-
