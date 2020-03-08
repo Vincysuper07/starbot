@@ -1,6 +1,10 @@
 import discord
 from discord.ext import commands
 
+class starboard(commands.Cog):
+      def __init__(self, bot):
+            self.bot = bot
+
 description = '''A star bot.'''
 bot = commands.Bot(command_prefix='v!starboard ', description=description)
 @bot.event
