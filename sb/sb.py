@@ -77,3 +77,6 @@ async def recheck(ctx):
         guildcount += 1
     print("Finished checking " + str(messagecount) + " messages in " + str(channelcount) + " channels and "
           + str(guildcount) + " guilds.")
+
+def setup(bot):
+      bot.add_cog(ServStatus(bot))
