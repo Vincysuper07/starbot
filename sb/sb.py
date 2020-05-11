@@ -6,7 +6,7 @@ class starboard(commands.Cog):
             self.bot = bot
 
 description = '''A star bot.'''
-bot = commands.Bot(command_prefix='v!starboarb ', description=description)
+#bot = commands.Bot(command_prefix='v!starboarb ', description=description)
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -60,7 +60,7 @@ async def star_post_check(message):
         cache.write(str(message.id) + " ")
         cache.close()
 
-@bot.command(help = "Rechecks all channels.")
+@commands.command(help = "Rechecks all channels.")
 @commands.is_owner()
 async def recheck(ctx):
     messagecount = 0
