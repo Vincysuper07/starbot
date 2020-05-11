@@ -7,7 +7,7 @@ class starboard(commands.Cog):
 
 description = '''A star bot.'''
 #bot = commands.Bot(command_prefix='v!starboarb ', description=description)
-@bot.event
+@commands.event
 async def on_ready():
     print('Logged in as')
     print(bot.user.name, bot.user.id)
