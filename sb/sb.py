@@ -7,7 +7,7 @@ class starboard(commands.Cog):
 
 description = '''A star bot.'''
 bot = commands.Bot(command_prefix='v!starboarb ', description=description)
-@commands.event
+@bot.event
 async def on_ready():
     print('Logged in as')
     print(bot.user.name, bot.user.id)
@@ -20,7 +20,7 @@ async def on_ready():
 # owner
 owner = "509386354862456833"
 
-@commands.event
+@bot.event
 async def on_raw_reaction_add(emoji, messageid, channelid, member):
     reactchannel = bot.get_channel(channelid)
     message = await reactchannel.get_message(messageid)
